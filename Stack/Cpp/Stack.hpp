@@ -8,6 +8,7 @@ class Stack
             Node *prev; // A pointer to the previous element
         };
         Node *top;
+        int _size;
     
     public:
         Stack();
@@ -16,13 +17,14 @@ class Stack
         T peek();
         T pop();
         void push(T);
+        int size();
 };
 
 template <typename T>
 Stack<T>::Stack()
 {
     top = nullptr;
-    //top->prev = nullptr;
+    _size = 0;
 }
 
 template <typename T>
@@ -65,6 +67,7 @@ T Stack<T>::pop()
         top = top->prev;
         value = temp->data;
         delete temp;
+        _size--;
     }
 
     return value;
@@ -78,4 +81,11 @@ void Stack<T>::push(T value)
     newNode->prev = top;
 
     top = newNode;
+    _size++;
+}
+
+template <typename T>
+int Stack<T>::size()
+{
+    return _size;
 }

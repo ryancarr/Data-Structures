@@ -30,7 +30,6 @@ int main()
         stack.push(letter);
     }
 
-    // I forgot to include a size variable in the stack, perhaps a good addition
     bool isPalindrome = false;
 
     for(char letter : input)
