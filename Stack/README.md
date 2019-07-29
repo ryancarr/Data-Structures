@@ -1,6 +1,6 @@
 # Stack
 
-This is a generic implementation of a stack in C++. I'll cover the basics and not get too fancy. The base for the stack will actually use a singally linked list.
+This is a generic implementation of a stack in C++. I'll cover the basics and not get too fancy. The base for the stack will actually use a singaly linked list.
 
 ## Public Methods
 
